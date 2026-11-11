@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lanterne Labs — des outils pour la démocratie</title>
+<meta name="description" content="Lanterne Labs conçoit et teste des outils pour une démocratie plus transparente. Tools for democracy.">
+<link rel="canonical" href="https://lanternelabs.net/">
+<meta property="og:title" content="Lanterne Labs">
+<meta property="og:description" content="Des outils pour la démocratie. Tools for democracy.">
+<meta property="og:url" content="https://lanternelabs.net/">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  :root {
+    --bg: #14110d;
+    --fg: #f3ead9;
+    --muted: #a99c86;
+    --flame: #ffb347;
+    --line: #3a3126;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #fbf6ec;
+      --fg: #241d14;
+      --muted: #6f6351;
+      --flame: #c46a00;
+      --line: #e2d7c3;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 18px/1.6 Georgia, "Iowan Old Style", "Times New Roman", serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 20px;
+    text-align: center;
+  }
+  main { max-width: 34rem; }
+  .lantern { width: 72px; height: 96px; color: var(--flame); }
+  .lantern .glow { animation: flicker 4s ease-in-out infinite; transform-origin: 50% 60%; }
+  @keyframes flicker {
+    0%, 100% { opacity: 1; }
+    45% { opacity: .82; }
+    55% { opacity: .95; }
+    70% { opacity: .78; }
+  }
+  @media (prefers-reduced-motion: reduce) { .lantern .glow { animation: none; } }
+  h1 {
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
+    font-weight: 400;
+    letter-spacing: .02em;
+    margin: 20px 0 4px;
+  }
+  .tag { font-size: 1.3rem; font-style: italic; margin: 0; }
+  .tag-en { color: var(--muted); font-size: 1rem; margin: 2px 0 0; }
+  .body { margin: 28px 0 0; }
+  .body-en { color: var(--muted); font-size: .95rem; margin: 10px 0 0; }
+  hr { border: 0; border-top: 1px solid var(--line); margin: 32px auto; width: 4rem; }
+  a { color: var(--flame); text-underline-offset: 3px; }
+  a:hover { text-decoration-thickness: 2px; }
+  .project a { font-size: 1.25rem; }
+  .project p { margin: 4px 0 0; }
+  .contact { color: var(--muted); font-size: .95rem; margin: 0; }
+</style>
+</head>
+<body>
+<main>
+  <svg class="lantern" viewBox="0 0 72 96" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Lanterne">
+    <path d="M28 12a8 8 0 0 1 16 0"/>
+    <path d="M24 20h24l-3-8H27z"/>
+    <path d="M18 28h36l-6-8H24z"/>
+    <path d="M20 28l4 48h24l4-48"/>
+    <path d="M22 76h28v8H22z"/>
+    <path class="glow" fill="currentColor" stroke="none" d="M36 40c6 8 9 13 9 19a9 9 0 0 1-18 0c0-4 2-7 4-9 0 3 1 5 3 6-1-6 0-11 2-16z"/>
+  </svg>
+
+  <h1>Lanterne Labs</h1>
+  <p class="tag">Des outils pour la démocratie.</p>
+  <p class="tag-en" lang="en">Tools for democracy.</p>
+
+  <p class="body">Nous concevons et testons des outils pour une démocratie plus transparente.</p>
+  <p class="body-en" lang="en">We design and test tools for a more transparent democracy.</p>
+
+  <hr>
+
+  <div class="project">
+    <a href="https://tartuffe.me">tartuffe.me</a>
+    <p>Le détecteur de contradictions des politiques, sources à l’appui.</p>
+    <p class="body-en" lang="en">The contradiction detector for politicians, with sources.</p>
+  </div>
+
+  <hr>
+
+  <p class="contact">Contact : <a href="mailto:lanternelabs@proton.me">lanternelabs@proton.me</a></p>
+</main>
+</body>
+</html>
